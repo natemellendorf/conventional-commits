@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.0.1](https://github.com/natemellendorf/conventional-commits/compare/v1.0.0...v1.0.1) (2022-05-08)
+
+
+### Bug Fixes
+
+* example bugfix ([a55a73a](https://github.com/natemellendorf/conventional-commits/commit/a55a73a8d7f874f0481bf6bd29b3364de210d7e8))
+
 ## 1.0.0 (2022-05-08)
 
 
