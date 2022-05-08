@@ -7,7 +7,7 @@ jobs:
     container: node:17-buster-slim
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
       - name: Semantic Release - pkg install
         run: apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
       - name: Semantic Release - npm install
