@@ -13,4 +13,7 @@ jobs:
       - name: Semantic Release - npm install
         run: npm install -g semantic-release @semantic-release/github @semantic-release/changelog conventional-changelog-conventionalcommits @semantic-release/commit-analyzer @semantic-release/git
       - name: Semantic Release
-        run: ls -lah && semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: semantic-release
+        
