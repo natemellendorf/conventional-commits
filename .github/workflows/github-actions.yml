@@ -6,7 +6,9 @@ jobs:
     runs-on: ubuntu-18.04
     container: node:17-buster-slim
     steps:
-      - uses: actions/checkout@v2
-      - run: apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
-      - run: npm install -g semantic-release @semantic-release/github @semantic-release/changelog conventional-changelog-conventionalcommits @semantic-release/commit-analyzer @semantic-release/git
-      - run: semantic-release
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Semantic Release
+        run: apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
+        run: npm install -g semantic-release @semantic-release/github @semantic-release/changelog conventional-changelog-conventionalcommits @semantic-release/commit-analyzer @semantic-release/git
+        run: ls -lah && semantic-release
