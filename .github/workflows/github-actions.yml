@@ -1,0 +1,10 @@
+name: learn-github-actions
+on: [push]
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    container: node:17-buster-slim
+    steps:
+      - run: apt-get update && apt-get install -y --no-install-recommends git-core ca-certificates
+      - run: npm install -g semantic-release @semantic-release/github @semantic-release/changelog conventional-changelog-conventionalcommits @semantic-release/commit-analyzer @semantic-release/git
+      - run: semantic-release
